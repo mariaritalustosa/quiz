@@ -22,12 +22,42 @@ perguntas_pt = [
         "Opções": {
             "A": "Rio de Janeiro",
             "B": "Teresina",
-            "C": "Brasília"
+            "C": "Brasília",
             "D": "Manaus"
         },
         "Resposta": "C"
     },
     {
-        
+        "Pergunta": "Quantos segundos tem um minuto?",
+        "Opções": {
+            "A": "90",
+            "B": "120",
+            "C": "10",
+            "D": "60"
+        },
+        "Resposta": "C"
     }
 ]     
+
+perguntas_en = [
+    {
+        "Question": "What is the capital of Brazil?",
+        "Options": {
+            "A": "Rio de Janeiro",
+            "B": "Teresina",
+            "C": "Brasília",
+            "D": "Manaus"
+        },
+        "Answer": "C"
+    },
+    {
+        "Question": "How many seconds are in a minute",
+        "Options": {
+            "A": "90",
+            "B": "120",
+            "C": "10",
+            "D": "60"
+        },
+        "Answer": "C"
+    }
+]    
