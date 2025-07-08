@@ -8,14 +8,6 @@ print("Starting...")
 
 language_user = input("Qual idioma de sua preferência?/Which language do you prefer?(pt-br/en)\n")
 
-if language_user == "pt-br":
-    perguntas = perguntas_pt
-elif language_user == "en":
-    perguntas = perguntas_en
-else:
-    perguntas = perguntas_pt
-
-
 perguntas_pt = [
     {
         "Pergunta": "Qual a capital do Brasil?",
@@ -35,7 +27,7 @@ perguntas_pt = [
             "C": "10",
             "D": "60"
         },
-        "Resposta": "C"
+        "Resposta": "D"
     }
 ]     
 
@@ -58,6 +50,36 @@ perguntas_en = [
             "C": "10",
             "D": "60"
         },
-        "Answer": "C"
+        "Answer": "D"
     }
-]    
+] 
+
+if language_user == "pt-br":
+    perguntas = perguntas_pt
+    key_pergunta = "Pergunta"
+    key_opcoes = "Opções"
+    key_resposta = "Resposta"
+elif language_user == "en":
+    perguntas = perguntas_en
+    key_pergunta = "Question"
+    key_opcoes = "Options"
+    key_resposta = "Answer"
+else:
+    perguntas = perguntas_pt
+
+score = 0
+
+for i, pergunta in enumerate(perguntas):
+    print(f"\nPergunta {i + 1}: {pergunta[key_pergunta]}")
+    for letra, texto in pergunta[key_opcoes].items():
+        print(f"{letra}: {texto}")
+
+    resposta_usuario = input("Sua resposta: ").strip().upper()
+    resposta_correta = pergunta[key_resposta].strip().upper()
+    if resposta_usuario == resposta_correta:
+        print("Resposta correta!")
+        score += 1
+    else: 
+        print(f"Resposta errada! A resposta correta é {resposta_correta}")
+
+print(f"\nFim do quiz! Você acertou {score}")                
